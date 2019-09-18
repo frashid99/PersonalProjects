@@ -172,11 +172,14 @@
 		color: white;
 	}
 
+	#education{
+
+	}
 
 </style>
 </head>
 <body>
-<div>
+<div id="navbar">
     <ul id="navul">
         <li class="navli"><a href="#home" style="font-family: mylodon">Home</a></li>
         <li class="navli"><a href="#education" style="font-family: mylodon">Education</a></li>
@@ -210,7 +213,7 @@
 	<p class="p">Throughout these classes I still wasn't sure what exactly I wanted to do in the CS field once I graduated college. It wasn't until my Junior year that I found what I wanted to specialize in. I took a Mobile Development class where we were to make an android app as a group. For my group, we decided to make a study group app and I was to handle the front-end part. Once I began working on the app's UI/UX, I knew this is what I wanted to do as my career. To me, front-end development was like a form of art where I didn't need to know how to draw (I suck at drawing lol). I also enjoyed front-end because of the fact that it is more visual compared to back-end development so that I could see the immediate changes I was making. I had full control over the appearance of the app and it gave me immense pleasure by having an image in my head come alive, much like a drawing.</p> 
 </div>
 
-<div>
+<div id="industry">
 	<h1>Industry</h1>
 	<img src="oneclass.png" alt="Avatar" height="107" width="80" id="oneclass">
 	<img src="ole.jpg" alt="Avatar" height="107" width="80" id="ole">
@@ -229,13 +232,42 @@
 	</p>
 </div>
 
-<div>
+<div id="about">
 	<h1>About</h1>
 	<p class="p">I never planned on making my own website. It wasn't until the beginning of this summer that during a conversation my friend, the same one I mentioned above, suggested that I do so.</p>
 	<p class="p">During this time I did not have an intership and was worried about how I would land a job in the CS field without any experience in the industry. I confided in my friend about my worries and he assured me not to worry about not having an internship because there were many other things I could do to put my CS skills to good use, such as building this amazing website! He knew I had an interest in UI/UX design and I questioned myself as to why I had not thought about doing this before. With my friend's help and encouragement I set off to make this website and this is the current result although much work still remains to be done.</p>
 	<p class="p">I plan to update this site frequently as I plan to make it look as nice as possible. As of right now, I think I am done with the main things I wanted to add.</p>
 	<p class="p">Even though I ended up getting an internship at Open Learning Exchange I'm glad I made this website since I had a ton of fun and reinforced my interest in UI/UX design. I wish I could go back in time and tell myself not to worry so much about the future because eventually everything works itself out and I would like to say the same to you.</p>
 </div>
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#navbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
 
 </body>
 </html>
