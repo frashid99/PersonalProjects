@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style>
 
 	html{
@@ -174,11 +172,14 @@
 		color: white;
 	}
 
+	#education{
+
+	}
+
 </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">	
-<div id="navbar">
+<div>
     <ul id="navul">
         <li class="navli"><a href="#home" style="font-family: mylodon">Home</a></li>
         <li class="navli"><a href="#education" style="font-family: mylodon">Education</a></li>
@@ -186,7 +187,6 @@
         <li class="navli" style="float:right"><a class="active" href="#about" style="font-family: mylodon">About</a></li>
     </ul>
 </div>
-</nav>
 
 <div id="home" class="card" style="background-image: url(Grid_Concept_Art.jpg)">
   <img src="https://i.imgur.com/x8bcr07.png" alt="Avatar" height="300" width="245" class="radius">
@@ -240,34 +240,7 @@
 	<p class="p">Even though I ended up getting an internship at Open Learning Exchange I'm glad I made this website since I had a ton of fun and reinforced my interest in UI/UX design. I wish I could go back in time and tell myself not to worry so much about the future because eventually everything works itself out and I would like to say the same to you.</p>
 </div>
 
-<script>
-$(document).ready(function(){
-  // Add scrollspy to <body>
-  $('body').scrollspy({target: ".navbar", offset: 50});   
 
-  // Add smooth scrolling on all links inside the navbar
-  $("#navbar a").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    }  // End if
-  });
-});
-</script>
 
 </body>
 </html>
